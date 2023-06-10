@@ -1,0 +1,51 @@
+Import the kanban module.
+
+Declare and initialize constants for the "todo", "pending", and "completed" columns.
+
+Declare and initialize an array called "taskbox" that contains the above columns.
+
+Define a function called "addTaskCard" that takes a task and an index as parameters.
+
+Inside the "addTaskCard" function, create a new form element and set its properties.
+
+Append the form element to the appropriate column.
+
+Call the "getAllTasks" method of the kanban module and loop through each task, calling the "addTaskCard" function for each task and index.
+
+Get all the "add" forms on the page and attach an event listener to each form's submit event.
+
+In the event listener, prevent the default form submission behavior.
+
+Check if the form's input value is not empty.
+
+Call the "insertTask" method of the kanban module, passing in the column ID and task content.
+
+Call the "addTaskCard" function, passing in the returned task and column index.
+
+Reset the form.
+
+Loop through each column in "taskbox" and attach a click event listener to each column.
+
+In the event listener, prevent the default behavior of the click event.
+
+Get the form input element of the clicked card.
+
+If the clicked button has the "edit" class, remove the "disabled" attribute from the form input element, hide the "edit" button, and show the "update" button.
+
+If the clicked button has the "update" class, set the "disabled" attribute on the form input element, hide the "update" button, and show the "edit" button.
+
+Call the "updateTask" method of the kanban module, passing in the task ID, updated column ID, and updated content.
+
+If the clicked button has the "delete" class, remove the card from the column and call the "deleteTask" method of the kanban module, passing in the task ID.
+
+Attach a "dragstart" event listener to each column.
+
+In the event listener, add the "dragging" class to the clicked card.
+
+Attach a "dragover" event listener to each column.
+
+In the event listener, append the dragged card to the column.
+
+Attach a "dragend" event listener to each column.
+
+In the event listener, remove the "dragging" class from the card, get the task ID, updated column ID, and updated content from the card, and call the "updateTask" method of the kanban module with these values.
